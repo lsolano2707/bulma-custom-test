@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+// Import only what you need from Bulma
+// @import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+
+// Update Bulma's global variables
+$primary: $color-primary;
+$secondary: $color-secondary;
+$orange: $color-orange;
+
+// Add new colors
+$addColors: (
+  "secondary": ($secondary, findColorInvert($secondary)),
+  "orange": ($orange, findColorInvert($orange))
+);
+
+$custom-colors: $addColors;
+
+
+// Import all Bulma
+// @import '~bulma';
+
+// Import only what you need from Bulma
+@import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/elements/button.sass";
+@import "~bulma/sass/elements/container.sass";
+@import "~bulma/sass/elements/title.sass";
+@import "~bulma/sass/form/_all.sass";
+@import "~bulma/sass/components/navbar.sass";
+@import "~bulma/sass/layout/hero.sass";
+@import "~bulma/sass/layout/section.sass";
