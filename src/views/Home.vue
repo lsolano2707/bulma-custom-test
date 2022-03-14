@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <h1 class="font-caveat-brush">HelloWorld</h1>
     <div class="buttons">
       <button class="button is-primary">Primary</button>
       <button class="button is-secondary">Secondary</button>
