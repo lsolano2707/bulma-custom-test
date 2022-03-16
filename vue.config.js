@@ -3,7 +3,7 @@ module.exports = {
     // proxy: 'https://xkcd.com/',
     proxy: {
       '/api': {
-        target: 'https://xkcd.com/',
+        target: 'https://xkcd.com',
         pathRewrite: { '^/api': '' },
         changeOrigin: true,
         secure: false,
