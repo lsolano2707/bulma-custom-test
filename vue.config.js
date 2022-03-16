@@ -5,8 +5,9 @@ module.exports = {
       '/api': {
         target: 'https://xkcd.com',
         pathRewrite: { '^/api': '' },
+        ws: true,
         changeOrigin: true,
-        secure: false,
+        // secure: true,
       },
     },
   },
