@@ -37,7 +37,7 @@ export default {
       .getLastComic()
       .then((response) => {
         console.log('response', response);
-        this.result = response;
+        this.result = response.data;
       })
       .catch((error) => {
         console.error(`Error: ${error}`);
