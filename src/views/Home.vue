@@ -14,12 +14,34 @@
       <button class="button is-warning">Warning</button>
       <button class="button is-danger">Danger</button>
     </div>
+
+    <br>
+    <br>
+    result: {{result}}
   </div>
 </template>
 
 <script>
+import comicService from '../services/comic.service';
+
 export default {
   name: 'Home',
+  data() {
+    return {
+      result: {},
+    };
+  },
   components: {},
+  mounted() {
+    comicService
+      .getLastComic()
+      .then((response) => {
+        console.log('response', response);
+        this.result = response;
+      })
+      .catch((error) => {
+        console.error(`Error: ${error}`);
+      });
+  },
 };
 </script>
