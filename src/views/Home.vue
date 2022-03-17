@@ -36,7 +36,6 @@ export default {
     comicService
       .getLastComic()
       .then((response) => {
-        console.log('response', response);
         this.result = response.data;
       })
       .catch((error) => {
