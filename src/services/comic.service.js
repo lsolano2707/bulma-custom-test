@@ -1,8 +1,10 @@
 import axios from 'axios';
 
-const getLastComic = () => axios.get('/api/info.0.json');
+const URL_BASE = process.env.VUE_APP_API_URL;
 
-const getComicById = (comicId) => axios.get(`/api/${comicId}/info.0.json`);
+const getLastComic = () => axios.get(`${URL_BASE}/info.0.json`);
+
+const getComicById = (comicId) => axios.get(`${URL_BASE}/${comicId}/info.0.json`);
 
 export default {
   getLastComic,

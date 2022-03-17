@@ -1,14 +1,5 @@
 module.exports = {
   devServer: {
-    // proxy: 'https://xkcd.com/',
-    proxy: {
-      '/api': {
-        target: 'https://xkcd.com',
-        pathRewrite: { '^/api': '' },
-        ws: true,
-        changeOrigin: true,
-        // secure: true,
-      },
-    },
+    proxy: 'https://xkcd.com/',
   },
 };
